@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fahmi Rizki Nur Setia | Staf Administrasi &amp; Web Developer, Bandung</title>
+  <meta name="description" content="Portofolio Fahmi Rizki Nur Setia: staf administrasi dengan pengalaman sekitar 1 tahun di pengelolaan stok, data operasional, dan pelayanan pelanggan, yang juga membangun aplikasi web dengan PHP, MySQL, dan JavaScript.">
+  <meta name="theme-color" content="#F3F0E8">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fahmi Rizki Nur Setia | Rapi di data, cekatan di kode">
+  <meta property="og:description" content="Staf administrasi yang membangun sistem pengelolaan stok dan keuangannya sendiri.">
+  <meta property="og:image" content="assets/profile.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@600;700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Fahmi Rizki Nur Setia","jobTitle":"Staf Administrasi","address":{"@type":"PostalAddress","addressLocality":"Bandung","addressRegion":"Jawa Barat","addressCountry":"ID"},"email":"mailto:fahmirizkinursetya@gmail.com","url":"https://pamie-still-learning.github.io/Portofolio","sameAs":["https://www.linkedin.com/in/fahmirizkinursetia","https://github.com/Pamie-still-learning"]}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Lewati ke konten</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- NAVIGASI -->
+  <header class="nav" id="nav">
+    <div class="nav__bar">
+      <a class="logo" href="#beranda" aria-label="Fahmi Rizki Nur Setia, ke beranda">
+        <span class="logo__mark" aria-hidden="true">F</span>
+        <span class="logo__text">Fahmi Rizki</span>
+      </a>
+      <nav class="nav__links" aria-label="Utama">
+        <a href="#tentang" data-link="tentang">Tentang</a>
+        <a href="#pengalaman" data-link="pengalaman">Pengalaman</a>
+        <a href="#kompetensi" data-link="kompetensi">Kompetensi</a>
+        <a href="#aplikasi" data-link="aplikasi">Aplikasi</a>
+        <a href="#kontak" data-link="kontak">Kontak</a>
+      </nav>
+      <a class="btn btn--sm nav__cta" href="assets/CV_Fahmi_Rizki_Nur_Setia.pdf" download><span>Unduh CV</span></a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Buka menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav aria-label="Seluler">
+      <a href="#tentang">Tentang</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#kompetensi">Kompetensi</a>
+      <a href="#aplikasi">Aplikasi</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <a class="menu__cv" href="assets/CV_Fahmi_Rizki_Nur_Setia.pdf" download>Unduh CV (PDF)</a>
+  </div>
+
+  <main id="main">
+    <!-- BERANDA -->
+    <section class="hero" id="beranda">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <h1 class="hero__title" data-split aria-label="Rapi di data, cekatan di kode.">Rapi di data, cekatan di kode.</h1>
+          <p class="hero__lead" data-fade>Saya Fahmi Rizki Nur Setia, staf administrasi di Bandung. Sekitar satu tahun saya mengelola stok, data operasional, dan pelanggan, lalu membuat aplikasi web sendiri untuk mempercepat pekerjaan itu.</p>
+          <div class="hero__cta" data-fade>
+            <a class="btn" href="#pengalaman"><span>Lihat pengalaman</span></a>
+            <a class="btn btn--ghost" href="#kontak"><span>Hubungi saya</span></a>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-sheet>
+          <div class="sheet" role="img" aria-label="Ilustrasi lembar kerja Excel berisi contoh data stok jaket dengan rumus SUMIF">
+            <div class="sheet__top"><i></i><i></i><i></i><span>Stok_Harian.xlsx</span></div>
+            <div class="sheet__fx"><b>fx</b><span class="sheet__formula" id="formula">=SUMIF(A2:A6,"Jaket*",D2:D6)</span><em class="caret"></em></div>
+            <div class="sheet__grid" id="sheetGrid">
+              <table>
+                <thead><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead>
+                <tbody>
+                  <tr><th>1</th><td class="h">Item</td><td class="h">Masuk</td><td class="h">Keluar</td><td class="h">Sisa</td></tr>
+                  <tr><th>2</th><td>Jaket Bomber</td><td>40</td><td>32</td><td class="bar" style="--w:8" data-v="8">8</td></tr>
+                  <tr><th>3</th><td>Jaket Varsity</td><td>30</td><td>18</td><td class="bar" style="--w:12" data-v="12">12</td></tr>
+                  <tr><th>4</th><td>Hoodie Zipper</td><td>25</td><td>20</td><td class="bar" style="--w:5" data-v="5">5</td></tr>
+                  <tr><th>5</th><td>Jaket Parka</td><td>20</td><td>9</td><td class="bar" style="--w:11" data-v="11">11</td></tr>
+                  <tr><th>6</th><td>Coach Jacket</td><td>35</td><td>28</td><td class="bar" style="--w:7" data-v="7">7</td></tr>
+                  <tr class="sum"><th>7</th><td>Total</td><td>150</td><td>107</td><td id="sumCell">43</td></tr>
+                </tbody>
+              </table>
+              <span class="sheet__sel" id="sel"></span>
+            </div>
+            <p class="sheet__note">Contoh data ilustrasi</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Excel</span><i></i><span>Google Sheets</span><i></i><span>SQL</span><i></i><span>PHP</span><i></i><span>Laravel</span><i></i><span>JavaScript</span><i></i><span>MySQL</span><i></i><span>Pelayanan pelanggan</span><i></i>
+          <span>Excel</span><i></i><span>Google Sheets</span><i></i><span>SQL</span><i></i><span>PHP</span><i></i><span>Laravel</span><i></i><span>JavaScript</span><i></i><span>MySQL</span><i></i><span>Pelayanan pelanggan</span><i></i>
+          <span>Excel</span><i></i><span>Google Sheets</span><i></i><span>SQL</span><i></i><span>PHP</span><i></i><span>Laravel</span><i></i><span>JavaScript</span><i></i><span>MySQL</span><i></i><span>Pelayanan pelanggan</span><i></i>
+          <span>Excel</span><i></i><span>Google Sheets</span><i></i><span>SQL</span><i></i><span>PHP</span><i></i><span>Laravel</span><i></i><span>JavaScript</span><i></i><span>MySQL</span><i></i><span>Pelayanan pelanggan</span><i></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section class="about" id="tentang">
+      <div class="wrap about__grid">
+        <figure class="portrait" data-reveal-img>
+          <div class="portrait__inner"><img data-parallax src="assets/profile.jpg" alt="Foto Fahmi Rizki Nur Setia berkemeja putih dan berdasi abu-abu" width="1024" height="1536" loading="lazy"></div>
+        </figure>
+
+        <div class="about__text">
+          <h2 data-split>Teliti dengan angka, terbiasa membuat alatnya sendiri.</h2>
+          <p data-reveal>Saya lulusan Rekayasa Perangkat Lunak SMK Wiraswasta Cimahi (Mei 2026) yang bekerja di sisi administrasi: data entry, pengelolaan stok, laporan stok dan keuangan, pengarsipan, serta pelayanan pelanggan.</p>
+          <p data-reveal>Karena latar belakang pemrograman, saya tidak berhenti di Excel. Kalau sebuah pekerjaan berulang bisa dibuat otomatis, saya menuliskannya sebagai aplikasi dengan PHP, MySQL, HTML, CSS, dan JavaScript.</p>
+          <dl class="facts" data-reveal>
+            <div><dt>Lokasi</dt><dd>Bandung, Jawa Barat</dd></div>
+            <div><dt>Pendidikan</dt><dd>SMK Rekayasa Perangkat Lunak</dd></div>
+            <div><dt>Bahasa</dt><dd>Indonesia (native), Inggris (dasar sampai menengah)</dd></div>
+          </dl>
+          <div class="about__cta" data-reveal>
+            <a class="btn" href="assets/CV_Fahmi_Rizki_Nur_Setia.pdf" download><span>Unduh CV (PDF)</span></a>
+            <a class="textlink" href="#kontak">Atau kirim pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <dl class="stats">
+          <div class="stat"><dd><span data-count="50">50</span>+</dd><dt>data operasional dikelola setiap hari di TM Production</dt></div>
+          <div class="stat"><dd><span data-count="15">15</span>&ndash;<span data-count="20">20</span></dd><dt>item stok dipantau dan dilaporkan secara rutin</dt></div>
+          <div class="stat"><dd><span data-count="3">3</span>&ndash;<span data-count="5">5</span></dd><dt>pelanggan dilayani setiap hari</dt></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- PENGALAMAN -->
+    <section class="exp" id="pengalaman">
+      <div class="wrap exp__grid">
+        <header class="exp__head">
+          <h2 data-split>Pengalaman kerja</h2>
+          <p data-reveal>Dari administrasi harian di konveksi dan marketplace sampai membuat aplikasi untuk klien.</p>
+        </header>
+
+        <ol class="timeline" id="timeline">
+          <li class="tl">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <p class="tl__when">Mei sampai September 2026</p>
+            <h3>Staf Administrasi</h3>
+            <p class="tl__org">TM Production (konveksi jaket)</p>
+            <ul>
+              <li>Mengelola 15&ndash;20 item stok dan 50+ data operasional per hari dengan Excel, serta menyusun laporan stok dan keuangan secara rutin.</li>
+              <li>Menyiapkan dokumen administrasi dan melayani 3&ndash;5 pelanggan per hari.</li>
+              <li>Membuat program perhitungan stok barang dan keuangan perusahaan dengan PHP, MySQL, HTML, CSS, dan JavaScript.</li>
+            </ul>
+            <p class="chips"><span>Excel</span><span>PHP</span><span>MySQL</span><span>Laporan keuangan</span></p>
+          </li>
+
+          <li class="tl">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <p class="tl__when">September sampai Oktober 2026</p>
+            <h3>Freelance Pengembangan Web dan Aplikasi</h3>
+            <p class="tl__org">Proyek klien</p>
+            <ul>
+              <li>Mengembangkan aplikasi POS dan landing page dengan PHP, MySQL, HTML, CSS, dan JavaScript sesuai kebutuhan digital klien.</li>
+              <li>Membangun fitur CRUD untuk data produk dan integrasi database agar pencatatan operasional lebih mudah.</li>
+            </ul>
+            <p class="chips"><span>PHP</span><span>MySQL</span><span>CRUD</span><span>Landing page</span></p>
+          </li>
+
+          <li class="tl tl--minor">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <p class="tl__when">Juli 2026</p>
+            <h3>Greeter (sukarelawan)</h3>
+            <p class="tl__org">Event IMI</p>
+            <ul><li>Menyambut pengunjung dan memberikan informasi acara secara langsung.</li></ul>
+          </li>
+
+          <li class="tl">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <p class="tl__when">Juni sampai Desember 2025</p>
+            <h3>Staf Administrasi (magang)</h3>
+            <p class="tl__org">PT ShezUp</p>
+            <ul>
+              <li>Mengelola operasional TikTok Shop dan Shopee: mengunggah 5&ndash;10 produk, memperbarui stok, dan menjaga konsistensi listing dengan Excel dan Sheets.</li>
+              <li>Membantu penghitungan stok, administrasi, pelayanan pelanggan, dan koordinasi lintas tim.</li>
+            </ul>
+            <p class="chips"><span>TikTok Shop</span><span>Shopee</span><span>Google Sheets</span></p>
+          </li>
+
+          <li class="tl tl--minor">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <p class="tl__when">Januari sampai Juli 2025</p>
+            <h3>Ketua Departemen Bisnis dan Kemitraan</h3>
+            <p class="tl__org">OSIS (pengalaman organisasi)</p>
+            <ul><li>Mengoordinasikan kegiatan bisnis dan kemitraan, komunikasi dengan pihak eksternal, serta kerja sama tim dalam kegiatan sekolah.</li></ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- KOMPETENSI -->
+    <section class="skills" id="kompetensi">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 data-split>Kompetensi</h2>
+          <p data-reveal>Rumus yang saya pakai setiap hari, dan hal-hal lain yang mendukung pekerjaan administrasi.</p>
+        </header>
+
+        <ul class="fx-grid" aria-label="Fungsi Excel dan Google Sheets">
+          <li><code>=VLOOKUP()</code></li>
+          <li><code>=XLOOKUP()</code></li>
+          <li><code>=INDEX(MATCH())</code></li>
+          <li><code>=SUMIF()</code></li>
+          <li><code>=COUNTIF()</code></li>
+          <li><code>=IF()</code></li>
+          <li><code>=IFERROR()</code></li>
+          <li><code>PivotTable</code></li>
+          <li><code>Filter &amp; Sort</code></li>
+          <li><code>Data Validation</code></li>
+        </ul>
+
+        <div class="skill-cards">
+          <article class="skill">
+            <h3>Aplikasi perkantoran</h3>
+            <p>Microsoft Word, Microsoft Excel, Google Sheets, Google Docs, dan Google Workspace.</p>
+          </article>
+          <article class="skill">
+            <h3>Administrasi dan data</h3>
+            <p>Data entry, pengelolaan stok dan inventaris, laporan stok dan keuangan, pengarsipan, serta pemeriksaan data.</p>
+          </article>
+          <article class="skill">
+            <h3>Pelayanan dan komunikasi</h3>
+            <p>Pelayanan pelanggan, komunikasi publik, serta koordinasi lintas tim dan pihak eksternal.</p>
+          </article>
+          <article class="skill">
+            <h3>Digital</h3>
+            <p>SQL dasar, PHP, Laravel, JavaScript, MySQL, HTML, dan CSS untuk mengolah data dan mengotomatiskan pekerjaan administratif.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- APLIKASI -->
+    <section class="apps" id="aplikasi">
+      <div class="wrap">
+        <header class="section-head section-head--ink">
+          <h2 data-split>Aplikasi yang saya bangun</h2>
+          <p data-reveal>Alat nyata untuk pekerjaan nyata, mulai dari stok dan keuangan sampai kasir kafe.</p>
+        </header>
+
+        <ul class="app-list">
+          <li class="app">
+            <details>
+              <summary><span class="app__name">StockPro, inventaris</span><span class="app__short">Pengelolaan stok TM Production</span><span class="app__plus" aria-hidden="true"></span></summary>
+              <div class="app__body">
+                <p>CRUD produk, kategori, dan pemakai bahan; pencatatan transaksi stok per tanggal; laporan kategori bulanan; ekspor PDF dan Excel dengan logo perusahaan. Bisa dipasang di ponsel sebagai PWA.</p>
+                <p class="chips"><span>PHP</span><span>MySQL</span><span>PWA</span></p>
+              </div>
+            </details>
+          </li>
+          <li class="app">
+            <details>
+              <summary><span class="app__name">Cashflow TM Supreme</span><span class="app__short">Dasbor arus kas perusahaan</span><span class="app__plus" aria-hidden="true"></span></summary>
+              <div class="app__body">
+                <p>Ringkasan pemasukan dan pengeluaran dengan grafik, serta rincian hutang vendor dan konsumen per PO supaya angka mudah ditelusuri.</p>
+                <p class="chips"><span>PHP</span><span>MySQL</span><span>Chart.js</span></p>
+              </div>
+            </details>
+          </li>
+          <li class="app">
+            <details>
+              <summary><span class="app__name">PO Management</span><span class="app__short">Purchase order, vendor, dan logistik</span><span class="app__plus" aria-hidden="true"></span></summary>
+              <div class="app__body">
+                <p>Pengelolaan PO, pembayaran vendor (DP dan pelunasan), pelacakan barang, unggah foto nota, dan login dengan password terenkripsi (bcrypt).</p>
+                <p class="chips"><span>PHP</span><span>MySQL</span><span>JavaScript</span></p>
+              </div>
+            </details>
+          </li>
+          <li class="app">
+            <details>
+              <summary><span class="app__name">POS kafe dengan pesan lewat QR</span><span class="app__short">Proyek freelance untuk klien</span><span class="app__plus" aria-hidden="true"></span></summary>
+              <div class="app__body">
+                <p>Kasir untuk staf, sementara pelanggan memesan dari QR di meja tanpa login. Pesanan muncul langsung di kasir dan stok bahan berkurang otomatis sesuai resep.</p>
+                <p class="chips"><span>PHP</span><span>MySQL</span><span>QR order</span></p>
+              </div>
+            </details>
+          </li>
+          <li class="app">
+            <details>
+              <summary><span class="app__name">MTTP, Memo Tempat Turun Produksi</span><span class="app__short">Memo produksi dan laporan periodik</span><span class="app__plus" aria-hidden="true"></span></summary>
+              <div class="app__body">
+                <p>Aplikasi dengan login, dasbor, input pengguna dan MTTP, serta laporan harian, mingguan, bulanan, dan tahunan.</p>
+                <p class="chips"><span>PHP</span><span>Bootstrap</span><span>MySQL</span></p>
+              </div>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PENDIDIKAN -->
+    <section class="edu" id="pendidikan">
+      <div class="wrap edu__row">
+        <h2 data-split>Pendidikan</h2>
+        <div class="edu__card" data-reveal>
+          <h3>SMK Wiraswasta Cimahi</h3>
+          <p>Rekayasa Perangkat Lunak, Cimahi, Jawa Barat. Lulus Mei 2026.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="contact" id="kontak">
+      <div class="wrap">
+        <h2 class="contact__title" data-split>Siap berkontribusi sebagai staf administrasi.</h2>
+
+        <div class="contact__grid">
+          <ul class="links">
+            <li><a href="https://wa.me/62881023479357" target="_blank" rel="noopener"><span>WhatsApp</span><b>0881-0234-79357</b></a></li>
+            <li><a href="mailto:fahmirizkinursetya@gmail.com"><span>Email</span><b>fahmirizkinursetya@gmail.com</b></a></li>
+            <li><a href="https://www.linkedin.com/in/fahmirizkinursetia" target="_blank" rel="noopener"><span>LinkedIn</span><b>linkedin.com/in/fahmirizkinursetia</b></a></li>
+            <li><a href="https://github.com/Fahmi-rizki-nur-setia" target="_blank" rel="noopener"><span>GitHub</span><b>https://github.com/Fahmi-rizki-nur-setia</b></a></li>
+          </ul>
+
+          <form class="form" id="contactForm" novalidate>
+            <label for="f-name">Nama</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+            <label for="f-msg">Pesan</label>
+            <textarea id="f-msg" name="message" rows="4" required></textarea>
+            <button class="btn btn--light" type="submit"><span>Buka di aplikasi email</span></button>
+            <p class="form__status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__row">
+      <p>&copy; <span id="year">2026</span> Fahmi Rizki Nur Setia. Bandung, Jawa Barat.</p>
+      <a href="#beranda">Kembali ke atas</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
